@@ -1,0 +1,10 @@
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+  padding: 0;
+  position: relative;
+}
+
+.slider__image {
+  mix-blend-mode: darken;
+}

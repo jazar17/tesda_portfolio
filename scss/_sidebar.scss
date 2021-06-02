@@ -1,0 +1,43 @@
+.sidebar {
+  width: 25vw;
+  height: 100vh;
+  background: rgb(9, 9, 121);
+  background-image: url("https://picsum.photos/id/1038/1024/1024");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  position: relative;
+
+  .wrapper__index & {
+    box-shadow: 14px 0px 26px 4px rgba(0, 0, 0, 0.28);
+    -webkit-box-shadow: 14px 0px 26px 4px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 14px 0px 26px 4px rgba(0, 0, 0, 0.28);
+  }
+
+  &__menu {
+    padding: 1rem 0.5rem;
+  }
+}
+
+.mainTitle,
+.rotatedTitle {
+  position: absolute;
+  color: white;
+  margin: 0;
+}
+
+.mainTitle {
+  bottom: 10vh;
+  left: 15%;
+  white-space: nowrap;
+  font-family: "Abril Fatface", serif;
+  font-size: 15rem;
+}
+
+.rotatedTitle {
+  right: 0;
+  bottom: 13vh;
+  height: 75vh;
+
+  animation: showFromRightToLeft 500ms ease-in 0ms forwards;
+}

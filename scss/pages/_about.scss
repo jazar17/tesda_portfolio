@@ -1,0 +1,21 @@
+.about {
+  &__text {
+    animation: showFromBottomToTOp 500ms ease-in forwards;
+    // background-image: url("https://picsum.photos/id/1019/5472/3648");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__profile {
+    animation: showFromBottomToTOp 500ms ease-in 200ms forwards;
+  }
+}
+
+.profile {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
