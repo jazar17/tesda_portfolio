@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run watch",
-    "build": "NODE_ENV=build npx sass scss/main.scss styles/style.css && npx @11ty/eleventy",
+    "build": "NODE_ENV=build npx sass scss/main.scss styles/style.css && npx @11ty/eleventy -- --formats=html,njk",
     "watch": "npx @11ty/eleventy --serve",
     "watch:sass": "npx sass sass:_site/css --watch",
     "sass": "npx sass sass:_site/css --watch && npx @11ty/eleventy --serve"
