@@ -1,19 +1,10 @@
 ---
 layout: side_bar.njk
-images:
-  row1:
-    - "http://picsum.photos/id/1049/600/600"
-    - "http://picsum.photos/id/1060/600/600"
-    - "http://picsum.photos/id/1072/600/600"
-  row2:
-    - "http://picsum.photos/id/1074/600/600"
-    - "http://picsum.photos/id/122/600/600"
-    - "http://picsum.photos/id/129/600/600"
 ---
 <section class="main-content__section" id="about">
     <div class="container">
         <div class="row about__container">
-            <div class="col m6 push-m6 hide-on-small-only about__profile">
+            <div class="col m6 push-m6 about__profile">
                 <img class="profile" src="https://picsum.photos/id/1005/480/854" alt="">
             </div>
             <div class="col m6 pull-m6 about__text">
@@ -34,5 +25,3 @@ images:
         </div>
     </div>
 </section>
-
-{% include 'gallery.njk' %}

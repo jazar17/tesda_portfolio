@@ -1,7 +1,7 @@
 .sidebar {
   width: 25vw;
   height: 100vh;
-  background: rgb(9, 9, 121);
+  background: #071b22;
   background-image: url("https://picsum.photos/id/1038/1024/1024");
   background-size: cover;
   background-repeat: no-repeat;
@@ -16,6 +16,29 @@
 
   &__menu {
     padding: 1rem 0.5rem;
+  }
+
+  &__bottomNav {
+    position: absolute;
+    bottom: 10vh;
+    left: 15%;
+
+    .nav-link {
+      display: flex;
+      color: white;
+      border: 1px solid white;
+      border-radius: 50%;
+      padding: 0;
+      height: 62px;
+      width: 62px !important;
+      justify-content: center;
+      align-items: center;
+
+      .material-icons {
+        height: 24px;
+        width: 24px;
+      }
+    }
   }
 }
 

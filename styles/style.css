@@ -14,6 +14,18 @@ h3 {
   font-family: "Abril Fatface", serif;
 }
 
+h4 {
+  font-family: "Abril Fatface", serif;
+}
+
+h5 {
+  font-family: "Abril Fatface", serif;
+}
+
+h6 {
+  font-family: "Abril Fatface", serif;
+}
+
 .index .mainHeader {
   --foreGroundColor: white;
   position: absolute;
@@ -87,16 +99,22 @@ h3 {
   height: 3px;
   width: 100%;
   background: var(--foreGroundColor);
-  transform: translateX(-1000px);
-  animation: underline_out 1000ms ease;
+  transform: translateX(-105%);
 }
-.nav-link:hover::after {
+.nav-link.active::after {
   transform: translateX(0);
-  animation: underline_in 1000ms ease;
+  animation: underline_in 500ms ease;
 }
-
 .nav-link__icons {
   font-size: 1rem;
+}
+
+.underline_out::after {
+  animation: underline_out 500ms ease forwards;
+}
+
+.underline_in::after {
+  animation: underline_in 500ms ease forwards;
 }
 
 @keyframes underline_out {
@@ -104,12 +122,12 @@ h3 {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(1000px);
+    transform: translateX(105%);
   }
 }
 @keyframes underline_in {
   0% {
-    transform: translateX(-1000px);
+    transform: translateX(-100%);
   }
   100% {
     transform: translateX(0);
@@ -118,7 +136,7 @@ h3 {
 .sidebar {
   width: 25vw;
   height: 100vh;
-  background: #090979;
+  background: #071b22;
   background-image: url("https://picsum.photos/id/1038/1024/1024");
   background-size: cover;
   background-repeat: no-repeat;
@@ -132,6 +150,26 @@ h3 {
 }
 .sidebar__menu {
   padding: 1rem 0.5rem;
+}
+.sidebar__bottomNav {
+  position: absolute;
+  bottom: 10vh;
+  left: 15%;
+}
+.sidebar__bottomNav .nav-link {
+  display: flex;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 0;
+  height: 62px;
+  width: 62px !important;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar__bottomNav .nav-link .material-icons {
+  height: 24px;
+  width: 24px;
 }
 
 .mainTitle,
@@ -195,6 +233,10 @@ h3 {
   }
 }
 
+.gallery__rows {
+  opacity: 0;
+  transform: translateY(100%);
+}
 .gallery__row1 {
   margin: 0;
   line-height: 1;
@@ -215,6 +257,11 @@ h3 {
   transform: scale(1.1);
 }
 
+.formContainer {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
 @keyframes showFromRightToLeft {
   0% {
     transform: translateX(100%);
@@ -223,6 +270,34 @@ h3 {
     transform: translateX(0);
   }
 }
+.showFromBottomToTOp {
+  animation: showFromBottomToTOp 500ms ease-in forwards;
+}
+
+.delay100ms {
+  animation-delay: 100ms;
+}
+
+.delay100ms {
+  animation-delay: 100ms;
+}
+
+.delay200ms {
+  animation-delay: 200ms;
+}
+
+.delay300ms {
+  animation-delay: 300ms;
+}
+
+.delay400ms {
+  animation-delay: 400ms;
+}
+
+.delay500ms {
+  animation-delay: 500ms;
+}
+
 @keyframes showFromBottomToTOp {
   0% {
     opacity: 0;
@@ -248,6 +323,8 @@ body {
 @media only screen and (max-width: 600px) {
   .main {
     width: 100vw;
+    height: auto;
+    overflow: inherit;
   }
 }
 
@@ -269,6 +346,17 @@ body {
   overflow: hidden;
   height: 100%;
   scroll-snap-align: start;
+}
+@media only screen and (max-width: 600px) {
+  .main-content {
+    height: auto;
+    overflow-y: inherit;
+  }
+  .main-content__section {
+    overflow-y: inherit;
+    height: auto;
+    scroll-snap-align: start;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -79,14 +79,16 @@
     height: 3px;
     width: 100%;
     background: var(--foreGroundColor);
-    transform: translateX(-1000px);
-    animation: underline_out 1000ms ease;
+    transform: translateX(-105%);
+  }
+
+  &.active::after {
+    transform: translateX(0);
+    animation: underline_in 500ms ease;
   }
 
   &:hover {
     &::after {
-      transform: translateX(0);
-      animation: underline_in 1000ms ease;
     }
   }
 }
@@ -95,19 +97,27 @@
   font-size: 1rem;
 }
 
+.underline_out::after {
+  animation: underline_out 500ms ease forwards;
+}
+
+.underline_in::after {
+  animation: underline_in 500ms ease forwards;
+}
+
 @keyframes underline_out {
   0% {
     transform: translateX(0);
   }
 
   100% {
-    transform: translateX(1000px);
+    transform: translateX(105%);
   }
 }
 
 @keyframes underline_in {
   0% {
-    transform: translateX(-1000px);
+    transform: translateX(-100%);
   }
 
   100% {

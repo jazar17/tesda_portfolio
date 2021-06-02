@@ -5,6 +5,7 @@
 @import "pages/index";
 @import "pages/about";
 @import "pages/gallery";
+@import "pages/contact";
 @import "animations/sidebar";
 
 body {
@@ -22,6 +23,8 @@ body {
 
   @media only screen and (max-width: 600px) {
     width: 100vw;
+    height: auto;
+    overflow: inherit;
   }
 }
 
@@ -43,5 +46,16 @@ body {
     overflow: hidden;
     height: 100%;
     scroll-snap-align: start;
+  }
+
+  @media only screen and (max-width: 600px) {
+    height: auto;
+    overflow-y: inherit;
+
+    &__section {
+      overflow-y: inherit;
+      height: auto;
+      scroll-snap-align: start;
+    }
   }
 }

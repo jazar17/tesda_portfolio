@@ -1,20 +1,25 @@
+---
+layout: side_bar.njk
+---
 <section class="main-content__section" id="gallery">
     <div class="container">
-        <h2 class="sectionTitle">Gallery</h2>
-        <div class="row gallery__row1">
-            {% for img in images.row1 %}
+        <h2 class="sectionTitle showFromBottomToTOp">Gallery</h2>
+        <div class="gallery__rows showFromBottomToTOp delay500ms">
+            <div class="row gallery__row1">
+                {% for img in images.row1 %}
                 <div class="col m4 gallery__image-container">
                     <img src="{{img}}" class="gallery__image materialboxed" alt="">
                 </div>
-            {% endfor %}
-        </div>
-        <div class="row">
-            {% for img in images.row2 %}
+                {% endfor %}
+            </div>
+            <div class="row">
+                {% for img in images.row2 %}
                 <div class="col m4 gallery__image-container">
                     <img src="{{img}}" class="gallery__image materialboxed" alt="">
                 </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
+
     </div>
 </section>
-

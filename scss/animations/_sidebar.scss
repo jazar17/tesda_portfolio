@@ -8,6 +8,20 @@
   }
 }
 
+.showFromBottomToTOp {
+  animation: showFromBottomToTOp 500ms ease-in forwards;
+}
+
+.delay100ms {
+  animation-delay: 100ms;
+}
+
+@for $i from 1 through 5 {
+  .delay#{$i}00ms {
+    animation-delay: #{$i}00ms;
+  }
+}
+
 @keyframes showFromBottomToTOp {
   0% {
     opacity: 0;
