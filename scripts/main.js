@@ -13,11 +13,39 @@ $(document).ready(function () {
     }
   );
 
-  $('textarea#textarea1').characterCounter();
+  $("textarea#textarea1").characterCounter();
 
   let url = $(location)
     .attr("href")
     .split("/")
     .filter((part) => part);
   $(`a[href="/${url[url.length - 1]}"]`).addClass("active");
+
+  runAnimationObserver();
 });
+
+function runAnimationObserver() {
+  let options = {
+    root: document.querySelector(".main-content"),
+    rootMargin: "0%",
+    threshold: 0.1,
+  };
+
+  let targets = document.querySelectorAll(".animate");
+
+  let callback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        let elem = entry.target;
+        let animation = elem.dataset.animate;
+        elem.classList.add(animation);
+      }
+    });
+  };
+
+  let observer = new IntersectionObserver(callback, options);
+
+  targets.forEach((target) => {
+    observer.observe(target);
+  });
+}

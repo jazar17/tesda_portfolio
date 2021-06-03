@@ -6,7 +6,7 @@
     "start": "npm run watch",
     "build": "NODE_ENV=build npm install && npx sass scss/main.scss styles/style.css && npx @11ty/eleventy -- --formats=njk",
     "watch": "npx @11ty/eleventy --serve",
-    "watch:sass": "npx sass sass:_site/css --watch",
+    "watch:sass": "sass scss/main.scss styles/style.css --watch",
     "sass": "npx sass sass:_site/css --watch && npx @11ty/eleventy --serve"
   },
   "devDependencies": {

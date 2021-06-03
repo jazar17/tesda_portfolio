@@ -1,0 +1,6 @@
+{
+  "images": {
+    "row1": ["http://picsum.photos/id/1049/600/600", "http://picsum.photos/id/1060/600/600", "http://picsum.photos/id/1072/600/600"],
+    "row2": ["http://picsum.photos/id/1074/600/600", "http://picsum.photos/id/122/600/600", "http://picsum.photos/id/129/600/600"]
+  }
+}
