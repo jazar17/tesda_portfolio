@@ -46,8 +46,13 @@
 
   &__image {
     padding-top: 10px;
-    height: 10vh;
+    width: clamp(64px, 11vw, 82px);
   }
+}
+
+.nav {
+  display: flex;
+
 }
 
 .nav-link {

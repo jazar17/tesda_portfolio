@@ -54,7 +54,7 @@
   left: 15%;
   white-space: nowrap;
   font-family: "Abril Fatface", serif;
-  font-size: 15rem;
+  font-size: clamp(3rem, 23vw, 15rem);
 }
 
 .rotatedTitle {
