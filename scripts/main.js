@@ -1,7 +1,7 @@
 $(document).ready(function () {
   let height = $(window).height();
   $(".sidenav").sidenav({ edge: "right" });
-  $(".slider").slider({ height: height, indicators: false });
+  $(".slider").slider({ height: height, indicators: false, duration: 500, interval: 3000 });
   $(".materialboxed").materialbox();
   $(".modal").modal();
   $(".tooltipped").tooltip({ margin: 2, transitionMovement: 2 });
