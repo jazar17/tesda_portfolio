@@ -308,6 +308,13 @@ h6 {
   transform: translateY(100%);
 }
 
+.thanks__img {
+  height: 100%;
+}
+.thanks__text {
+  height: 100%;
+}
+
 @keyframes showFromRightToLeft {
   0% {
     transform: translateX(100%);
