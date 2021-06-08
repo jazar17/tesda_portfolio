@@ -104,6 +104,10 @@ h6 {
   background: var(--foreGroundColor);
   transform: translateX(-105%);
 }
+.page_home .nav-link.home::after, .page_about .nav-link.about::after, .page_gallery .nav-link.gallery::after, .page_contact .nav-link.contact::after {
+  transform: translateX(0);
+  animation: underline_in 500ms ease;
+}
 .nav-link.active::after {
   transform: translateX(0);
   animation: underline_in 500ms ease;

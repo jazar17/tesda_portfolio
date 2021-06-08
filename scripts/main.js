@@ -15,12 +15,6 @@ $(document).ready(function () {
 
   $("textarea#textarea1").characterCounter();
 
-  let url = $(location)
-    .attr("href")
-    .split("/")
-    .filter((part) => part);
-  $(`a[href="/${url[url.length - 1]}"]`).addClass("active");
-
   runAnimationObserver();
 });
 

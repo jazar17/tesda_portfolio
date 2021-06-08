@@ -52,7 +52,6 @@
 
 .nav {
   display: flex;
-
 }
 
 .nav-link {
@@ -84,6 +83,16 @@
     width: 100%;
     background: var(--foreGroundColor);
     transform: translateX(-105%);
+  }
+
+  .page_home &.home,
+  .page_about &.about,
+  .page_gallery &.gallery,
+  .page_contact &.contact {
+    &::after {
+      transform: translateX(0);
+      animation: underline_in 500ms ease;
+    }
   }
 
   &.active::after {
