@@ -34,5 +34,9 @@
     &:hover {
       transform: scale(1.1);
     }
+
+    &.active {
+      z-index: 999;
+    }
   }
 }

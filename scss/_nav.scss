@@ -6,6 +6,7 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 
     .siteLogo__image {
       filter: none;
@@ -35,7 +36,6 @@
 
 .siteLogo {
   &__link {
-    z-index: 1000;
     display: inline-block;
     transition: transform 200ms ease-in;
 
@@ -64,7 +64,6 @@
   position: relative;
   text-transform: uppercase;
   width: max-content !important;
-  z-index: 101;
 
   @at-root .index & {
     font-weight: bold;

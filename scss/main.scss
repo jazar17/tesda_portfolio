@@ -20,7 +20,12 @@ body {
   flex-direction: column;
 
   height: 100vh;
-  width: 75vw;
+
+  width: 80vw;
+  &.-main {
+    width: 75vw;
+  }
+
   overflow: hidden;
 
   @media only screen and (max-width: 600px) {
@@ -48,6 +53,14 @@ body {
     overflow: hidden;
     height: 100%;
     scroll-snap-align: start;
+
+    .container {
+      height: 100%;
+
+      .row {
+        height: 100%;
+      }
+    }
   }
 
   @media only screen and (max-width: 600px) {

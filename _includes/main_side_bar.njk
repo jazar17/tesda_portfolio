@@ -1,19 +1,21 @@
 ---
 layout: main_layout.njk
 ---
-<div class="wrapper wrapper__index">
-    <div class="sidebar hide-on-small-only">
-        <div class="container">
-            <div class="sidebar__menu">
-                <a href="#" data-target="slide-out" class="sidenav-trigger nav-link nav-link__mobileMenu"><i
-                        class="material-icons">menu</i></a>
-            </div>
-            <h1 class="mainTitle showFromBottomToTOp">J Azares</h1>
-        </div>
-    </div>
-    <div class="main index">
-        {% include 'main_menu.njk' %}
 
-        {{ content | safe }}
+<div class="wrapper wrapper__index">
+  <div class="sidebar -main hide-on-small-only">
+    <div class="container">
+      <div class="sidebar__menu">
+        <a href="#" data-target="slide-out" class="sidenav-trigger nav-link nav-link__mobileMenu"
+          ><i class="material-icons">menu</i></a
+        >
+      </div>
+      <h1 class="mainTitle showFromBottomToTOp">J Azares</h1>
     </div>
+  </div>
+  <div class="main -main index">
+    {% include 'main_menu.njk' %}
+
+    {{ content | safe }}
+  </div>
 </div>

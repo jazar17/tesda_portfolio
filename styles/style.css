@@ -32,6 +32,7 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
 }
 .index .mainHeader .siteLogo__image {
   filter: none;
@@ -59,7 +60,6 @@ h6 {
 }
 
 .siteLogo__link {
-  z-index: 1000;
   display: inline-block;
   transition: transform 200ms ease-in;
 }
@@ -84,7 +84,6 @@ h6 {
   position: relative;
   text-transform: uppercase;
   width: max-content !important;
-  z-index: 101;
 }
 .index .nav-link {
   font-weight: bold;
@@ -138,7 +137,7 @@ h6 {
   }
 }
 .sidebar {
-  width: 25vw;
+  width: 20vw;
   height: 100vh;
   background: #071b22;
   background-image: url("https://picsum.photos/id/1038/1024/1024");
@@ -146,6 +145,9 @@ h6 {
   background-repeat: no-repeat;
   background-position-x: center;
   position: relative;
+}
+.sidebar.-main {
+  width: 25vw;
 }
 .wrapper__index .sidebar {
   box-shadow: 14px 0px 26px 4px rgba(0, 0, 0, 0.28);
@@ -160,20 +162,19 @@ h6 {
   bottom: 10vh;
   left: 15%;
 }
+.sidebar__bottomNavLinkIcon {
+  height: 62px;
+  width: 62px;
+}
 .sidebar__bottomNav .nav-link {
   display: flex;
   color: white;
-  border: 1px solid white;
-  border-radius: 50%;
   padding: 0;
-  height: 62px;
-  width: 62px !important;
   justify-content: center;
   align-items: center;
 }
-.sidebar__bottomNav .nav-link .material-icons {
-  height: 24px;
-  width: 24px;
+.sidebar__bottomNav .nav-link:hover {
+  color: gray;
 }
 
 .mainTitle,
@@ -184,6 +185,7 @@ h6 {
 }
 
 .mainTitle {
+  z-index: 2;
   bottom: 10vh;
   left: 15%;
   white-space: nowrap;
@@ -223,6 +225,11 @@ h6 {
 }
 .about__profile {
   animation: showFromBottomToTOp 500ms ease-in 200ms forwards;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0px !important;
 }
 
 .profile {
@@ -262,6 +269,9 @@ h6 {
 }
 .gallery__image:hover {
   transform: scale(1.1);
+}
+.gallery__image.active {
+  z-index: 999;
 }
 
 .formContainer {
@@ -326,8 +336,11 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 75vw;
+  width: 80vw;
   overflow: hidden;
+}
+.main.-main {
+  width: 75vw;
 }
 @media only screen and (max-width: 600px) {
   .main {
@@ -355,6 +368,12 @@ body {
   overflow: hidden;
   height: 100%;
   scroll-snap-align: start;
+}
+.main-content__section .container {
+  height: 100%;
+}
+.main-content__section .container .row {
+  height: 100%;
 }
 @media only screen and (max-width: 600px) {
   .main-content {

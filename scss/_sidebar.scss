@@ -1,5 +1,10 @@
 .sidebar {
-  width: 25vw;
+  width: 20vw;
+
+  &.-main {
+    width: 25vw;
+  }
+
   height: 100vh;
   background: #071b22;
   background-image: url("https://picsum.photos/id/1038/1024/1024");
@@ -23,20 +28,20 @@
     bottom: 10vh;
     left: 15%;
 
+    &LinkIcon {
+      height: 62px;
+      width: 62px;
+    }
+
     .nav-link {
       display: flex;
       color: white;
-      border: 1px solid white;
-      border-radius: 50%;
       padding: 0;
-      height: 62px;
-      width: 62px !important;
       justify-content: center;
       align-items: center;
 
-      .material-icons {
-        height: 24px;
-        width: 24px;
+      &:hover {
+        color: gray;
       }
     }
   }
@@ -50,6 +55,7 @@
 }
 
 .mainTitle {
+  z-index: 2;
   bottom: 10vh;
   left: 15%;
   white-space: nowrap;
