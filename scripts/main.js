@@ -3,6 +3,8 @@ $(document).ready(function () {
   $(".sidenav").sidenav({ edge: "right" });
   $(".slider").slider({ height: height, indicators: false });
   $(".materialboxed").materialbox();
+  $(".modal").modal();
+  $(".tooltipped").tooltip({ margin: 2, transitionMovement: 2 });
 
   $(".nav-link").hover(
     function () {

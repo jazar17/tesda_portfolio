@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    
 
     .siteLogo__image {
       filter: none;
@@ -16,6 +16,7 @@
 
 .mainHeader {
   --foreGroundColor: black;
+  z-index: 999;
 
   .siteLogo__image {
     filter: invert(100%);

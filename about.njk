@@ -1,6 +1,6 @@
 ---
 layout: side_bar.njk
-page_id: 'about'
+page_id: "about"
 ---
 
 <section class="main-content__section" id="about">
@@ -24,24 +24,19 @@ page_id: 'about'
     </div>
   </div>
 </section>
-<section class="main-content__section" id="gallery">
+<section class="main-content__section galleryCssGrid" id="galleryCssGrid">
   <div class="container">
     <h2 class="sectionTitle gallery__title animate delay500ms" data-animate="showFromBottomToTOp">Gallery</h2>
-    <div class="gallery__rows animate delay500ms" data-animate="showFromBottomToTOp">
-      <div class="row gallery__row1">
-        {% for img in images.row1 %}
-        <div class="col m4 gallery__image-container">
-          <img src="{{ img }}" class="gallery__image materialboxed" alt="" />
-        </div>
-        {% endfor %}
+    <div class="gallery__cssGrid animate delay500ms" data-animate="showFromBottomToTOp">
+      {% for img in images.row1 %}
+      <div class="gallery__image-container-cssGrid">
+        <img src="{{ img }}" class="gallery__image-cssGrid materialboxed responsive-img" alt="" />
       </div>
-      <div class="row">
-        {% for img in images.row2 %}
-        <div class="col m4 gallery__image-container">
-          <img src="{{ img }}" class="gallery__image materialboxed" alt="" />
-        </div>
-        {% endfor %}
+      {% endfor %} {% for img in images.row2 %}
+      <div class="gallery__image-container-cssGrid">
+        <img src="{{ img }}" class="gallery__image-cssGrid materialboxed responsive-img" alt="" />
       </div>
+      {% endfor %}
     </div>
   </div>
 </section>
