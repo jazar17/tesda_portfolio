@@ -39,7 +39,7 @@ h6 {
 
 .mainHeader {
   --foreGroundColor: black;
-  z-index: 996;
+  z-index: 998;
 }
 .mainHeader .siteLogo__image {
   filter: invert(100%);
@@ -261,7 +261,7 @@ h6 {
 .gallery__rows {
   opacity: 0;
   transform: translateY(100%);
-  z-index: 1000;
+  z-index: 1001;
 }
 .gallery__title {
   opacity: 0;
@@ -326,7 +326,6 @@ h6 {
 }
 .showFromBottomToTOp {
   animation: showFromBottomToTOp 500ms ease-in forwards;
-  z-index: 1000;
 }
 
 .delay100ms {
