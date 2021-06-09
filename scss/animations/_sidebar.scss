@@ -10,6 +10,7 @@
 
 .showFromBottomToTOp {
   animation: showFromBottomToTOp 500ms ease-in forwards;
+  z-index: 1000;
 }
 
 .delay100ms {
